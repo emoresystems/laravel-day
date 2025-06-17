@@ -20,7 +20,7 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/" class="text-green-600 font-medium">Home</a>
-                    <a href="#" class="text-gray-600 hover:text-green-600">Events</a>
+                    <a href="/events" class="text-gray-600 hover:text-green-600">Events</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">Gallery</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">Members</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">News</a>
