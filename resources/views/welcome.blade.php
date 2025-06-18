@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
         <div class="container mx-auto px-6 text-center">
@@ -46,11 +47,11 @@
                 <!-- Event 1 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
                     <div class="h-48 bg-green-600 flex items-center justify-center text-white text-2xl font-bold">
-                        Homecoming 2023
+                        Dashboardcoming 2023
                     </div>
                     <div class="p-6">
                         <div class="text-green-600 font-semibold mb-2">Oct 15, 2023</div>
-                        <h3 class="text-xl font-bold mb-3">Annual Homecoming Weekend</h3>
+                        <h3 class="text-xl font-bold mb-3">Annual Dashboardcoming Weekend</h3>
                         <p class="text-gray-600 mb-4">Join us for a weekend of nostalgia, networking, and fun activities with your former classmates.</p>
                         <button class="text-green-600 font-semibold hover:underline">Learn More →</button>
                     </div>

@@ -25,6 +25,8 @@
                     <a href="#" class="text-gray-600 hover:text-green-600">Members</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">News</a>
                     <a href="/about" class="text-gray-600 hover:text-green-600">About</a>
+                    <a href="/login" class="text-gray-600 hover:text-green-600">Login</a>
+                    <a href="/register" class="text-gray-600 hover:text-green-600">Register</a>
                 </div>
                 <div class="md:hidden">
                     <button class="text-gray-600 focus:outline-none">
