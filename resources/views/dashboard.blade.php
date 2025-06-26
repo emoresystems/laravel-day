@@ -1,17 +1,26 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('backend.layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+@section('content')
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white shadow rounded p-4">
+          <h2 class="text-xl font-semibold mb-2">Alumni</h2>
+          <p class="text-3xl font-bold text-blue-500">1,245</p>
         </div>
-    </div>
-</x-app-layout>
+
+        <div class="bg-white shadow rounded p-4">
+          <h2 class="text-xl font-semibold mb-2">Events</h2>
+          <p class="text-3xl font-bold text-green-500">32</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+          <h2 class="text-xl font-semibold mb-2">Donations</h2>
+          <p class="text-3xl font-bold text-purple-500">KES 540K</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+          <h2 class="text-xl font-semibold mb-2">Messages</h2>
+          <p class="text-3xl font-bold text-orange-500">87</p>
+        </div>
+      </div>
+@endsection

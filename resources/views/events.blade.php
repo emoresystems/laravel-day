@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
 <h1>our events</h1>
-<h1>Our list of events</h1>
+<h1>Our list of events {{ $totalevents }}</h1>
 <div>
     @forelse ( $events as $event)
     <p>{{ $event->id }}</p>

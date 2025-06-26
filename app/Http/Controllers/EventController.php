@@ -13,7 +13,8 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('events', compact('events'));
+        $totalevents =  Event::count();
+        return view('events', compact('events' , 'totalevents'));
     }
 
     /**
@@ -21,7 +22,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.events.create');
     }
 
     /**

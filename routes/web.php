@@ -31,6 +31,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-Route::get('/events', [EventController::class, 'index']);
+Route::resource('/events', EventController::class);
 
 Route::get('/about', [AboutController::class, 'index']);
