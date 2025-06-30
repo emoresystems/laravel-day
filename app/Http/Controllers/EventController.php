@@ -14,9 +14,15 @@ class EventController extends Controller
     {
         $events = Event::all();
         $totalevents =  Event::count();
-        return view('events', compact('events' , 'totalevents'));
+        return view('events', compact('events', 'totalevents'));
     }
+    // show all events on admin side
+    public function backindex() {
 
+        $events = Event::all();
+        $totalevents =  Event::count();
+        return view('backend.events.index', compact('events', 'totalevents'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -30,7 +36,15 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        Event::create($validated);
+
+        // return "done welll";
+        return redirect()->route('backindex');
     }
 
     /**
@@ -46,7 +60,8 @@ class EventController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $event = Event::findOrFail($id);
+        return view('backend.events.edit', compact('event'));
     }
 
     /**
@@ -54,7 +69,15 @@ class EventController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        $event = Event::findOrFail($id);
+        $event->update($validated);
+        return "updated success";
+
     }
 
     /**
@@ -62,6 +85,8 @@ class EventController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $event = Event::findOrFail($id);
+        $event->delete();
+        return "event deleted";
     }
 }

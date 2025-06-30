@@ -26,8 +26,8 @@
                         </a>
                         <!-- Dropdown -->
                         <ul class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded w-48 z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">All Services</a></li>
-                            <li><a href="{{ route('events.create') }}" class="block px-4 py-2 hover:bg-gray-100">Add Services</a></li>                           
+                            <li><a href="{{ route('backindex') }}" class="block px-4 py-2 hover:bg-gray-100">All Events</a></li>
+                            <li><a href="{{ route('events.create') }}" class="block px-4 py-2 hover:bg-gray-100">Add Event</a></li>                           
                         </ul>
                     </li>
 

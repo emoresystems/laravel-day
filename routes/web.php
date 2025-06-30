@@ -32,5 +32,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 Route::resource('/events', EventController::class);
+Route::get('adminevents', [EventController::class, 'backindex'])->name('backindex');
 
 Route::get('/about', [AboutController::class, 'index']);
