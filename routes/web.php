@@ -30,8 +30,32 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 Route::resource('/events', EventController::class);
 Route::get('adminevents', [EventController::class, 'backindex'])->name('backindex');
 
 Route::get('/about', [AboutController::class, 'index']);
+
+
+
+Route::get('/restricted', function () {
+    return "you can come in";
+})->middleware('checkage');
+
+Route::get('/fail', function () {
+    return "request failed";
+});
+
+
+Route::get('/teacher/dashboard', function () {
+    return "Welcome, Teacher!";
+})->name('teacher.dashboard')->middleware('auth', 'ensurerole:teacher');
+
+Route::get('/student/dashboard', function () {
+    return "Welcome, Student!";
+})->name('student.dashboard')->middleware('auth', 'ensurerole:student');
+
+
+Route::get('/redirect', function(){
+
+})->middleware('auth','checkrole');
